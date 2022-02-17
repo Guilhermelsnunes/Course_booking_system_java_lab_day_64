@@ -29,6 +29,11 @@ class CoursebookingsystemApplicationTests {
 //		List<>
 //	}
 
+	@Test
+	public void canGetCoursesByRating() {
+
+	}
+
 
 
 

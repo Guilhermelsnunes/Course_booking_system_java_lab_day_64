@@ -13,7 +13,7 @@ public interface CustomerRepository extends JpaRepository <Customer, Long> {
 
     Customer findDistinctCustomerById(Long id);
 
-    List<Customer> findCustomersByBookingsCourse(Course course);
+    List<Customer> findCustomersByBookingsCourseName(String name);
 
 
 }
