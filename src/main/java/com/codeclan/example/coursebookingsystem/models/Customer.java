@@ -16,6 +16,9 @@ public class Customer {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "town")
     private String town;
 
@@ -26,13 +29,22 @@ public class Customer {
     @OneToMany(mappedBy = "customer",fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
-    public Customer(String town, int age) {
+    public Customer(String name, String town, int age) {
+        this.name = name;
         this.town = town;
         this.age = age;
         this.bookings= new ArrayList<Booking>();
     }
 
     public Customer() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Long getId() {
